@@ -60,7 +60,26 @@ public class ExampleList {
         }
         System.out.println(notas.toString());
         System.out.println("Apague toda a lista: ");
-        notas.clear();
+//        notas.clear();
         System.out.println("A lista está vazia? " + notas.isEmpty());
+
+        /*
+            Utilizando métodos da implementação LinkedList
+         */
+        System.out.println("Crie uma lista chamada notas2 e coloque todos "
+                + "os elementos da List ArrayList nessa nova lista ");
+        LinkedList<Double> notas2 = new LinkedList<>();
+        for (Double nota : notas) {
+            notas2.add(nota);
+        }
+        System.out.println(notas2);
+
+        System.out.println("Mostre a primeira nota da nova lista sem removê-la: ");
+        System.out.println(notas2.peek());
+        System.out.println(notas2);
+
+        System.out.println("Mostre a primeira nota da lista removendo-a:");
+        System.out.println(notas2.poll());
+        System.out.println(notas2);
     }
 }
